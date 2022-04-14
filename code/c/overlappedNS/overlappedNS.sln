@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "overlappedNS", "overlappedNS.vcxproj", "{4A8240A4-C65D-4700-B1EA-C89DE173FCDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A8240A4-C65D-4700-B1EA-C89DE173FCDF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4A8240A4-C65D-4700-B1EA-C89DE173FCDF}.Debug|Win32.Build.0 = Debug|Win32
+		{4A8240A4-C65D-4700-B1EA-C89DE173FCDF}.Release|Win32.ActiveCfg = Release|Win32
+		{4A8240A4-C65D-4700-B1EA-C89DE173FCDF}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F712C02-F86E-4BDF-8558-8E5369541149}
+	EndGlobalSection
+EndGlobal

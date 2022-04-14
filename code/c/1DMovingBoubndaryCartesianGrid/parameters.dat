@@ -1,0 +1,84 @@
+PARAMETERS_FOR_CARTESIAN_METHOD_2D_PROGRAM
+
+---GRID---
+
+number_of_cells:		100
+coordinate_of_left_boundary: 0.0
+coordinate_of_right_boundary: 0.1
+
+---MOVING_BODY_BORDERS_COORDINATES---
+
+coordinate_of_left_boundary_of_body: 0.0101
+coordinate_of_right_boundary_of_body: 0.01501
+
+---BODY_MOTION---
+
+body_velocity: 						0.0
+body_cross_section_devided_to_mass: 0.015
+
+---TIME_STEP---
+
+exit_time_cycle:	2
+time_cycle_iterations:	200
+t_fin:		0.003
+time_step_method:	1
+cfl:			0.5
+dt:			-1
+
+---DIMENTIONLESS---
+
+length: 1.0e-0
+time:	1.0e-0
+mass:   1.0e-0
+
+---OUTPUT---
+
+number_of_output_files: 50
+step_of_output_files: 2
+
+---NUMERICAL_SCHEME---
+
+numerical_method:   1
+max_iter_num:       20
+p_max_ratio:        2.0
+approximation_order: 1
+
+---INITIAL_CONDITIONS---
+
+LEFT_CONDITIONS
+
+number_of_left_cell:	0
+number_of_right_cell:	9
+density:	1.2
+velosity:	10.0
+pressure:	5e7
+
+RIGHT_CONDITIONS
+
+number_of_left_cell:	10
+number_of_right_cell:	99
+density:	1.2
+velosity:	0.0
+pressure:	1e6
+
+---SMALL_CONSTANTS---
+
+eps_general:    1.e-5
+eps_spatial:	1.e-8
+big:		1.e+20
+
+---GAMMA---
+
+g:		1.25
+
+---BORDER---
+
+type_of_left_border:	1
+type_of_right_border:	1
+
+---DEBUG_REGIME---
+
+debug:		0
+is_continue: 	0
+is_calculate_drag_force: 0
+is_initiate_parameters_in_outer_cells: 1

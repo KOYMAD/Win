@@ -1,0 +1,247 @@
+PARAMETERS_FOR_1D2PHC_PROGRAM(ALL_IN_SI)
+
+---NAME_OF_PROGRAM---(1D2PHC=1,1D3PHC=2,2D2PHC=3)
+
+program_name:       1
+
+---GENERAL_PART---
+
+---MODEL(BAER-NUNZIATO=1,SAUREL-ABGRALL=2)---
+
+media_model:        1
+porous_body:        0
+
+---TIME_STEP---
+
+constant_time_step: 0
+cfl:                0.5
+dt:                 -1
+
+---NUMERICAL_SCHEME(CIR1=1(BN),CIR2=2(BN),CIR3=3(BN),GODUNOV=4(BN),HLL=5(SA))---
+
+numerical_method:       5
+max_iter_num:           20
+p_max_ratio:            2.0
+
+   ---PRESSURE_RELAXATION---
+
+   pressure_relaxation:    1
+   pressure_relaxation_compaction: 1
+   formula_compaction(SCHWENDEMAN=1,SAUREL=2):     1
+      
+      tau_parameter: 3.e4
+      n_parameter:   1.02
+
+   volume_fraction_stop_compaction: 0.65
+
+velocity_relaxation:    0
+approximation_order:    1
+
+---EOS---
+
+use_real_eos:   0
+
+    ---DISPERSED_PHASE---
+
+    g1:         2.5
+    p01:        1.5e9
+    material_number1: 	0
+    specific_heat_cv1:  4800
+
+    ---GASEOUS_PHASE---
+
+    g2:         1.25
+    p02:        0.0
+    b_virial:   0.95e-3
+    mu_g:       6e-5
+    material_number2: 	0
+    specific_heat_cv2:  1500
+
+---MODE---
+
+is_debug:   0
+
+---OUTPUT---
+
+is_output_on_time:  1
+stop_time:          8e-3
+stop_steps_number:  450
+output_number:      50
+is_tecplot_header:  1
+
+---SENSORS---
+
+are_sensors: 1
+sensors_num: 5
+
+---SMALL_CONSTANTS---
+
+eps_general:    1.e-8
+eps_ludcmp:     1.e-20
+eps_decouple:   1.e-3
+eps_thin_layer: 1.e-4
+eps_contact:    1.e-15
+eps_disp_abs:   1.e-6
+eps_cut_out:    1.e-2
+eps_relax_compaction:   1.e-15
+
+--NON-DIMENSIONALIZATION---
+
+use_dimensions:     0
+
+mass_scale:         10.0
+time_scale:         1.e-3
+length_scale:       1.0
+temperature_scale:  1.0
+
+---VANISHING_PHASE_CASE---
+
+background_density:     2500.0
+background_velocity:    0.0
+background_pressure:    1.e5
+
+nice_output:    0
+
+---PHYSICS---
+
+is_physics:        1
+
+substeps_num:      5
+
+particle_diameter: 1.5e-3
+
+numerical_method: 1
+
+   ---FRICTION_FORCE---
+
+   is_friction_force:       1
+   fric_force_formula_num:  4
+   interface_drag_coeff:    3.5e7
+   is_Cd_const:       1
+   Cd:                0.6
+   Cd_formula:        -1   
+
+   ---COMPACTION---
+   
+   is_compaction:	    1
+   compaction_viscosity:    1.07e3
+
+   ---BURNING---
+
+   is_burning:		    1
+   ignition_condition:		    1
+   burning_formula_num(Serebryakov=1,Schwendeman=2):     1
+
+         ---SEREBRYAKOV_FORMULA---
+
+         e:		3.3e-4
+         U:		4.32056306e-9
+         nu:		0.9
+         X1:		0.74593
+         lambda1:	0.218088
+         mu1:		-0.04663
+         X2:		0.534040923
+         lambda2:	-1.058126411
+         mu2:		0.0
+	 zk:            1.472533333
+      
+         ---SCHWENDEMAN_FORMULA---
+
+         reaction_rate_prefactor: 4.0
+         ignition_pressure:       1.8e7
+
+   heat_release:            3.737e6 
+   ignition_tempetature:       600    
+
+   ---HEAT_TRANSFER---
+   
+   is_heat_transfer:          1
+   heat_transfer_coefficient: 5e5
+
+---1D_PARAMETERS---
+
+---GRID---
+
+left_boundary_x:  0.0
+right_boundary_x: 0.1
+cells_number:     250
+
+---INITIAL_CONDITIONS---
+
+number_of_scalars:  1
+ignition_time: 6e-3
+additional_heat: 2.1e7
+mass_input: 27000
+ic_blocks_number:   2
+
+BLOCK_1
+
+cell_begin: 0
+cell_end:   4
+beta1:      0.03
+density1:   1578
+velocity1:  0.0
+pressure1:  1e6
+density2:   1.2
+velocity2:  0.0
+initial_burning:  1
+cross_section: 2
+pressure2:  1e6
+
+       ---SCALARS---
+
+    z:  		0.0
+
+BLOCK_2
+
+cell_begin: 5
+cell_end:   249
+beta1:      0.03
+density1:   1578.0
+velocity1:  0.0
+pressure2:  1e6
+density2:   1.2
+velocity2:  0.0
+initial_burning:  0
+cross_section: 1
+pressure2:  1e6
+
+       ---SCALARS---
+
+    z:  		0.0
+
+---BOUNDARY_CONDITIONS---
+
+left_bc:    1
+right_bc:   1
+
+inflow_beta1:      	1e-7
+inflow_density1:   	2500.0
+inflow_velocity1:  	0.0
+inflow_pressure1:  	1.e5
+inflow_density2:   	1.818834
+inflow_velocity2:  	-151.076838
+inflow_pressure2:  	1.805e5
+inflow_scalar_value0:	1.0
+
+change_inflow_time: -1
+
+changed_inflow_beta1:      -1
+changed_inflow_density1:   -1
+changed_inflow_velocity1:  -1
+changed_inflow_pressure1:  -1
+changed_inflow_density2:   -1
+changed_inflow_velocity2:  -1
+changed_inflow_pressure2:  -1
+
+---EXACT_SOLUTION---
+
+build_exact_solution:               0
+cells_number_for_exact_solution:    100
+
+   ---SENSORS---
+   x1: 0.001
+   x2:  0.022
+   x3:  0.042
+   x4	0.062
+   x5:  0.084

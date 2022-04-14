@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6C7CF941-368D-4153-8F12-140A5FCFB0A1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>My1d2phc</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\common;..\common\numerical methods;..\common\physics;..\1d2phc;..\..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\common;..\common\physics;..\common\numerical methods;..\1d2phc;..\..\common</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\common\grid.cc" />
+    <ClCompile Include="..\common\io.cc" />
+    <ClCompile Include="..\common\io_1d.cc" />
+    <ClCompile Include="..\common\math_utils.cc" />
+    <ClCompile Include="..\common\memory.cc" />
+    <ClCompile Include="..\common\numerical methods\cir_1_bn.cc" />
+    <ClCompile Include="..\common\numerical methods\cir_2_bn.cc" />
+    <ClCompile Include="..\common\numerical methods\cir_3_bn.cc" />
+    <ClCompile Include="..\common\numerical methods\cir_4_bn.cc" />
+    <ClCompile Include="..\common\numerical methods\godunov_bn.cc" />
+    <ClCompile Include="..\common\numerical methods\hll.cc" />
+    <ClCompile Include="..\common\numerical methods\hllc_sa.cc" />
+    <ClCompile Include="..\common\numerical methods\minmod.cc" />
+    <ClCompile Include="..\common\numerical methods\rusanov_sa_1d2phc.cc" />
+    <ClCompile Include="..\common\physics\eos.cc" />
+    <ClCompile Include="..\common\physics\physics_solver.cc" />
+    <ClCompile Include="..\common\physics\relaxation.cc" />
+    <ClCompile Include="..\common\physics\source_terms.cc" />
+    <ClCompile Include="..\common\utils.cc" />
+    <ClCompile Include="..\common\utils_bn.cc" />
+    <ClCompile Include="exact_solution_1d2phc.cc" />
+    <ClCompile Include="main_1d2phc.cc" />
+    <ClCompile Include="utils_1d2phc.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\common\grid.h" />
+    <ClInclude Include="..\common\io.h" />
+    <ClInclude Include="..\common\io_1d.h" />
+    <ClInclude Include="..\common\math_utils.h" />
+    <ClInclude Include="..\common\memory.h" />
+    <ClInclude Include="..\common\numerical methods\cir_1_bn.h" />
+    <ClInclude Include="..\common\numerical methods\cir_2_bn.h" />
+    <ClInclude Include="..\common\numerical methods\cir_3_bn.h" />
+    <ClInclude Include="..\common\numerical methods\cir_4_bn.h" />
+    <ClInclude Include="..\common\numerical methods\godunov_bn.h" />
+    <ClInclude Include="..\common\numerical methods\hll.h" />
+    <ClInclude Include="..\common\numerical methods\hllc_sa.h" />
+    <ClInclude Include="..\common\numerical methods\minmod.h" />
+    <ClInclude Include="..\common\numerical methods\rusanov_sa_1d2phc.h" />
+    <ClInclude Include="..\common\physics\eos.h" />
+    <ClInclude Include="..\common\physics\physics_solver.h" />
+    <ClInclude Include="..\common\physics\relaxation.h" />
+    <ClInclude Include="..\common\physics\source_terms.h" />
+    <ClInclude Include="..\common\struct.h" />
+    <ClInclude Include="..\common\utils.h" />
+    <ClInclude Include="..\common\utils_bn.h" />
+    <ClInclude Include="exact_solution_1d2phc.h" />
+    <ClInclude Include="main_1d2phc.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="utils_1d2phc.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

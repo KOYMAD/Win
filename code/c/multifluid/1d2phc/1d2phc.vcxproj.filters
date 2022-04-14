@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Файлы исходного кода">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Заголовочные файлы">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы исходного кода\common part">
+      <UniqueIdentifier>{e495ca79-b9a3-4196-8450-1757667fd4f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\common part\physics">
+      <UniqueIdentifier>{14993e55-3827-4294-ad8f-bcff62b904fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\1d part">
+      <UniqueIdentifier>{315dcbff-aceb-4b5d-ad71-7457e2cc6514}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\common part">
+      <UniqueIdentifier>{0b0b6c33-7d38-4b17-bed6-ebadb2a7ce70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\1d part">
+      <UniqueIdentifier>{248907c0-a1de-45aa-92c8-5edfc3c88397}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\common part\physics">
+      <UniqueIdentifier>{4c03140a-1d14-4110-94d8-8f5b1bb0fd51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\common part\numerical methods">
+      <UniqueIdentifier>{e6625683-a916-4998-9b68-4f8bc7376256}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\common part\numerical methods\2nd order">
+      <UniqueIdentifier>{231503e3-28f9-4988-b05c-c25f7dec8463}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\common part\numerical methods\fluxes">
+      <UniqueIdentifier>{d96bedae-3097-4e54-b072-934db69f638e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\common part\numerical methods\fluxes\cir">
+      <UniqueIdentifier>{c5080ecd-6b91-42ba-bfe7-685b44afe04d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\common part\numerical methods">
+      <UniqueIdentifier>{26799252-8af5-4ca3-b70c-73c0901b96e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\common part\numerical methods\2nd order">
+      <UniqueIdentifier>{59694c51-9288-47ba-92e1-44fa95e442e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\common part\numerical methods\fluxes">
+      <UniqueIdentifier>{8575e3a3-469d-49a5-9c12-c3222323fd6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\common part\numerical methods\fluxes\cir">
+      <UniqueIdentifier>{24acb0f4-24e7-43b5-8042-637cc21d2b32}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="exact_solution_1d2phc.cc">
+      <Filter>Файлы исходного кода\1d part</Filter>
+    </ClCompile>
+    <ClCompile Include="utils_1d2phc.cc">
+      <Filter>Файлы исходного кода\1d part</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\io.cc">
+      <Filter>Файлы исходного кода\common part</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\math_utils.cc">
+      <Filter>Файлы исходного кода\common part</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\memory.cc">
+      <Filter>Файлы исходного кода\common part</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\utils.cc">
+      <Filter>Файлы исходного кода\common part</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\grid.cc">
+      <Filter>Файлы исходного кода\common part</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\physics\physics_solver.cc">
+      <Filter>Файлы исходного кода\common part\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\physics\relaxation.cc">
+      <Filter>Файлы исходного кода\common part\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\physics\eos.cc">
+      <Filter>Файлы исходного кода\common part\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\io_1d.cc">
+      <Filter>Файлы исходного кода\common part</Filter>
+    </ClCompile>
+    <ClCompile Include="main_1d2phc.cc">
+      <Filter>Файлы исходного кода\1d part</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\utils_bn.cc">
+      <Filter>Файлы исходного кода\common part</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\numerical methods\minmod.cc">
+      <Filter>Файлы исходного кода\common part\numerical methods\2nd order</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\numerical methods\cir_1_bn.cc">
+      <Filter>Файлы исходного кода\common part\numerical methods\fluxes\cir</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\numerical methods\cir_2_bn.cc">
+      <Filter>Файлы исходного кода\common part\numerical methods\fluxes\cir</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\numerical methods\cir_3_bn.cc">
+      <Filter>Файлы исходного кода\common part\numerical methods\fluxes\cir</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\numerical methods\cir_4_bn.cc">
+      <Filter>Файлы исходного кода\common part\numerical methods\fluxes\cir</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\numerical methods\godunov_bn.cc">
+      <Filter>Файлы исходного кода\common part\numerical methods\fluxes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\numerical methods\hll.cc">
+      <Filter>Файлы исходного кода\common part\numerical methods\fluxes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\numerical methods\hllc_sa.cc">
+      <Filter>Файлы исходного кода\common part\numerical methods\fluxes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\numerical methods\rusanov_sa_1d2phc.cc">
+      <Filter>Файлы исходного кода\common part\numerical methods\fluxes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\physics\source_terms.cc">
+      <Filter>Файлы исходного кода\common part\physics</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="utils_1d2phc.h">
+      <Filter>Заголовочные файлы\1d part</Filter>
+    </ClInclude>
+    <ClInclude Include="exact_solution_1d2phc.h">
+      <Filter>Заголовочные файлы\1d part</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\io.h">
+      <Filter>Заголовочные файлы\common part</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\math_utils.h">
+      <Filter>Заголовочные файлы\common part</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\memory.h">
+      <Filter>Заголовочные файлы\common part</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\struct.h">
+      <Filter>Заголовочные файлы\common part</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\grid.h">
+      <Filter>Заголовочные файлы\common part</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\physics\eos.h">
+      <Filter>Заголовочные файлы\common part\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\physics\physics_solver.h">
+      <Filter>Заголовочные файлы\common part\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\physics\relaxation.h">
+      <Filter>Заголовочные файлы\common part\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\io_1d.h">
+      <Filter>Заголовочные файлы\common part</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\utils.h">
+      <Filter>Заголовочные файлы\common part</Filter>
+    </ClInclude>
+    <ClInclude Include="main_1d2phc.h">
+      <Filter>Заголовочные файлы\1d part</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\utils_bn.h">
+      <Filter>Заголовочные файлы\common part</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\numerical methods\minmod.h">
+      <Filter>Заголовочные файлы\common part\numerical methods\2nd order</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\numerical methods\cir_1_bn.h">
+      <Filter>Заголовочные файлы\common part\numerical methods\fluxes\cir</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\numerical methods\cir_2_bn.h">
+      <Filter>Заголовочные файлы\common part\numerical methods\fluxes\cir</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\numerical methods\cir_3_bn.h">
+      <Filter>Заголовочные файлы\common part\numerical methods\fluxes\cir</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\numerical methods\cir_4_bn.h">
+      <Filter>Заголовочные файлы\common part\numerical methods\fluxes\cir</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\numerical methods\godunov_bn.h">
+      <Filter>Заголовочные файлы\common part\numerical methods\fluxes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\numerical methods\hll.h">
+      <Filter>Заголовочные файлы\common part\numerical methods\fluxes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\numerical methods\hllc_sa.h">
+      <Filter>Заголовочные файлы\common part\numerical methods\fluxes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\numerical methods\rusanov_sa_1d2phc.h">
+      <Filter>Заголовочные файлы\common part\numerical methods\fluxes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\physics\source_terms.h">
+      <Filter>Заголовочные файлы\common part\physics</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
