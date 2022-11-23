@@ -25,9 +25,9 @@
 // h - пространственный шаг
 // solution_ncons - вектор примитивных переменных в рассчитываемой €чейке на следующем шаге
 // n - реальный размер векторов
-void hllc_1d( struct ParametersCommon* paramsс, struct Parameters1d* params1d, struct DebugInfo *debug_info, double left_ncons[M], double center_ncons[M],
-              double right_ncons[M], double slopes_left[M], double slopes_center[M], double slopes_right[M],
-              double dt, double h, double solution_ncons[M], int step_number, int n, double curr_time, double *configuration_pressure ) ;
+void hllc_1d(struct ParametersCommon* paramsc, struct Parameters1d* params1d, struct DebugInfo *debug_info, double left_ncons[M], double center_ncons[M],
+          double right_ncons[M], double slopes_left[M], double slopes_center[M], double slopes_right[M],
+          double dt, double h, double solution_ncons[M], int step_number, int n, bool is_pressure_relaxation_after_this_step, int number_of_scalars, double curr_time, double *configuration_presure,  double body_velocity, int i, int *status,double cont_left[M], double cont_right[M] ) ;
 
 // √иперболический оператор метода HLLC
 // paramsc - структура с основными параметрами вычислительного эксперимента
@@ -40,9 +40,9 @@ void hllc_1d( struct ParametersCommon* paramsс, struct Parameters1d* params1d, s
 // dt - временной шаг
 // h - пространственный шаг
 // solution_ncons - вектор примитивных переменных в рассчитываемой €чейке после действи€ гиперболического оператора
-void Lh_HLLC( const struct ParametersCommon* paramsc, const double left_ncons[M], const double center_ncons[M],
-              const double right_ncons[M], double slopes_left[M], double slopes_center[M], double slopes_right[M],
-              const double dt, const double h, double solution_ncons[M] )  ;
+void Lh_HLLC( struct DebugInfo *debug_info, struct Parameters1d* params1d,  struct ParametersCommon* paramsc, const double left_ncons[M], const double center_ncons[M],
+             const double right_ncons[M], double slopes_left[M], double slopes_center[M], double slopes_right[M],
+             const double dt, const double h, double solution_ncons[M], int n, int number_of_scalars,  int i, int *status, double body_velocity,double cont_left[M], double cont_right[M]  );
 
 // ћетод Harten - Lax - van Leer - Contact (HLLC) расчета потоков в двухфазной среде
 // Liang S. et al. Solving seven-equation model for compressible two-phase flow using multiple GPUs //

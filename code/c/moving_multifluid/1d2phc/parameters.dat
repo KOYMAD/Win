@@ -8,7 +8,7 @@ program_name:       1
 
 ---MODEL(BAER-NUNZIATO=1,SAUREL-ABGRALL=2)---
 
-media_model:        1
+media_model:        2
 porous_body:        0
 
 ---TIME_STEP---
@@ -19,7 +19,7 @@ dt:                 -1
 
 ---NUMERICAL_SCHEME(CIR1=1(BN),CIR2=2(BN),CIR3=3(BN),GODUNOV=4(BN),HLL=5(SA))---
 
-numerical_method:       5
+numerical_method:       7
 max_iter_num:           200
 p_max_ratio:            2.0
 

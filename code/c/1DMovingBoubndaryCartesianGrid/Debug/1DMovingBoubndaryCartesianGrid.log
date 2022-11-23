@@ -1,0 +1,22 @@
+﻿Построение начато 05.03.2020 14:43:44.
+     1>Проект "C:\fastproclabb.git\trunk\chuprov\code\c\1DMovingBoubndaryCartesianGrid\1DMovingBoubndaryCartesianGrid.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt body_dynamic.cc
+         body_dynamic.cc
+     1>c:\fastproclabb.git\trunk\chuprov\code\c\1dmovingboubndarycartesiangrid\body_dynamic.cc(8): warning C4101: dir: неиспользованная локальная переменная
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\fastproclabb.git\trunk\chuprov\code\c\1DMovingBoubndaryCartesianGrid\Debug\1DMovingBoubndaryCartesianGrid.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\fastproclabb.git\trunk\chuprov\code\c\1DMovingBoubndaryCartesianGrid\Debug\1DMovingBoubndaryCartesianGrid.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\fastproclabb.git\trunk\chuprov\code\c\1DMovingBoubndaryCartesianGrid\Debug\1DMovingBoubndaryCartesianGrid.lib" /MACHINE:X86 Debug\body_dynamic.obj
+         Debug\common_functions.obj
+         Debug\flux.obj
+         Debug\initial_and_boundary_data.obj
+         Debug\main.obj
+         Debug\memory.obj
+         Debug\read_info.obj
+         Debug\time_integration.obj
+         Debug\write_info.obj
+         1DMovingBoubndaryCartesianGrid.vcxproj -> C:\fastproclabb.git\trunk\chuprov\code\c\1DMovingBoubndaryCartesianGrid\Debug\1DMovingBoubndaryCartesianGrid.exe
+     1>Построение проекта "C:\fastproclabb.git\trunk\chuprov\code\c\1DMovingBoubndaryCartesianGrid\1DMovingBoubndaryCartesianGrid.vcxproj" завершено (целевые объекты Build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:00.81

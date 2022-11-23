@@ -446,7 +446,7 @@ void calc_step_in_cell( struct ParametersCommon *paramsc, struct Parameters1d *p
             rusanov_1d( paramsc, params1d, debug_info, u_left, u_center, u_right, slopes_left, slopes_center, slopes_right, dt, h, u_next, step_number, n, curr_time, configuration_pressure  );
             break;
         case HLLC:
-            hllc_1d( paramsc, params1d, debug_info, u_left, u_center, u_right, slopes_left, slopes_center, slopes_right, dt, h, u_next, step_number, n, curr_time, configuration_pressure  );
+            hllc_1d( paramsc, params1d, debug_info, u_left, u_center, u_right, slopes_left, slopes_center, slopes_right, dt, h, u_next, step_number, n, is_pressure_relaxation_now, params1d->number_of_scalars, curr_time, configuration_pressure, body_velocity, i, status,  cont_left, cont_right );
             break;
         default:
             printf( "\ncalc_step_in_cell -> wrong scheme number\n" );
